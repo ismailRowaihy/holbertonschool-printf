@@ -2,7 +2,12 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "main.h"
-
+/**
+ *print_str- prints a string
+ *@c: string
+ *
+ *Return: num of printed chars
+ */
 
 int print_str(char *c)
 {
