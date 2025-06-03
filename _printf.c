@@ -2,6 +2,12 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "main.h"
+/**
+ *_printf - handles some type of prints
+ *@format: a string to check for specifiers
+ *
+ * Return: the num of printer characters
+ */
 
 int _printf(const char *format, ...)
 {
@@ -13,6 +19,9 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i]; i++)
 	{
+		if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
+
 		if (format[i] == '%' && format[++i])
 		{
 			switch (format[i])
